@@ -1,0 +1,83 @@
+body {
+  background-color: #222;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  h2{
+    text-decoration: underline;
+  }
+
+  .contenedor-jugarores {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 15px;
+    background-color: #111;
+    overflow-x: auto;
+    .jugador {
+      object-fit: cover;
+      object-position: center center;
+      text-align: center;
+      img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+      button {
+        background-color: #ccc;
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        color: #222;
+        font-weight: bold;
+        &:first-child {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: 0.5px solid #999;
+        }
+        &:last-child {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+  .cancha,
+  .suplentes {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 15px;
+    background-color: #111;
+    overflow-x: auto;
+    article {
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      display: grid;
+      div {
+        position: relative;
+        img {
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+        }
+        button{
+          position: absolute;
+          top: 0;
+          right: 0;
+          border: none;
+          border-radius: 50%;
+          padding: 0 5px;
+          font-weight: 900;
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
